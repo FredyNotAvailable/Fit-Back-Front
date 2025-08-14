@@ -1,12 +1,21 @@
 // src/config/firebase.ts
 
 import * as admin from 'firebase-admin';
-import serviceAccount from './serviceAccountKey.json';
+
+let serviceAccount: admin.ServiceAccount;
+
+if (process.env.FIREBASE_KEY) {
+  // En producción: lo tomamos de la variable de entorno en Render
+  serviceAccount = JSON.parse(process.env.FIREBASE_KEY as string);
+} else {
+  // En desarrollo local: cargamos el JSON físico
+  // eslint-disable-next-line @typescript-eslint/no-var-requires
+  serviceAccount = require('./serviceAccountKey.json');
+}
 
 if (!admin.apps.length) {
   admin.initializeApp({
-    credential: admin.credential.cert(serviceAccount as admin.ServiceAccount),
-    // storageBucket: "fitnessai-4a18d.appspot.com"
+    credential: admin.credential.cert(serviceAccount),
   });
 }
 
