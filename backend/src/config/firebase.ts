@@ -4,13 +4,12 @@ import * as admin from 'firebase-admin';
 
 let serviceAccount: admin.ServiceAccount;
 
-if (process.env.FIREBASE_KEY) {
-  // En producción: lo tomamos de la variable de entorno en Render
-  serviceAccount = JSON.parse(process.env.FIREBASE_KEY as string);
+if (process.env.FIREBASE_SERVICE_ACCOUNT) {
+  serviceAccount = JSON.parse(process.env.FIREBASE_SERVICE_ACCOUNT as string);
 } else {
-  // En desarrollo local: cargamos el JSON físico
+  // En desarrollo local
   // eslint-disable-next-line @typescript-eslint/no-var-requires
-  serviceAccount = require('./serviceAccountKey.json');
+  serviceAccount = require('../serviceAccountKey.json') as admin.ServiceAccount;
 }
 
 if (!admin.apps.length) {
