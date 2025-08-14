@@ -15,11 +15,10 @@ try {
   const json = process.env.FIREBASE_SERVICE_ACCOUNT;
   serviceAccount = JSON.parse(json);
 } catch (err) {
-  console.error('Error al parsear FIREBASE_SERVICE_ACCOUNT:', err);
-  throw new Error('No se pudo parsear FIREBASE_SERVICE_ACCOUNT. Revisa que esté en una sola línea y con \\n en la clave privada.');
+  throw new Error('Error al parsear FIREBASE_SERVICE_ACCOUNT: ' + err);
 }
 
-
+// Ahora TypeScript sabe que serviceAccount siempre está definido
 if (!admin.apps.length) {
   admin.initializeApp({
     credential: admin.credential.cert(serviceAccount),
