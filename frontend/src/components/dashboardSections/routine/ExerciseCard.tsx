@@ -1,7 +1,6 @@
 import { Box, Image, Text, VStack, HStack, useTheme, Spinner } from "@chakra-ui/react";
 import type { Exercise } from "../../../models/RoutineDay";
 import { useExerciseBase } from "../../../hooks/useExerciseBase";
-import { MdFitnessCenter } from "react-icons/md";
 
 // Diccionario básico para traducción
 function traducirTexto(text: string) {

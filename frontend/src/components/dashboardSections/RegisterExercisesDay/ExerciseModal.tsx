@@ -52,7 +52,6 @@ export function ExerciseModal({ isOpen, onClose, userId, date, onSaved }: Exerci
   const {
     create,
     loading: saving,
-    error: errorSaving,
   } = useExerciseHistoriesByUserAndDate(userId, date);
 
   const [selectedCategory, setSelectedCategory] = useState<Category>("all");

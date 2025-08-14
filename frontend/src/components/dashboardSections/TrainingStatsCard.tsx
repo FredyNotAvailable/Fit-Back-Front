@@ -8,7 +8,6 @@ import {
   Icon,
   IconButton,
   CircularProgress,
-  HStack,
 } from "@chakra-ui/react";
 import { FaDumbbell, FaPlus } from "react-icons/fa";
 

@@ -16,7 +16,7 @@ import { useExerciseBases } from "../../../hooks/useExerciseBase";
 import { ExerciseList } from "./ExerciseList";
 
 // Simulación de guardado en backend
-async function saveExerciseToBackend(data: {
+async function saveExerciseToBackend(_: {
   userId: string;
   exerciseBaseId: string;
   sets: number;

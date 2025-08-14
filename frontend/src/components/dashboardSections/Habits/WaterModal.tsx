@@ -31,7 +31,6 @@ export function WaterModal({
   onClose,
   initialLiters,
   initialNotes,
-  goalAmount,
   loading,
   onSave,
 }: WaterModalProps) {

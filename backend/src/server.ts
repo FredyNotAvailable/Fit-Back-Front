@@ -23,7 +23,7 @@ app.use(
     origin: [
       'http://localhost:3000',
       'http://localhost:5173',
-      'https://fitnessai-4a18d.web.app', // producción
+      'https://fitnessai-86c6a.web.app', // producción
     ],
   })
 );
