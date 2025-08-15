@@ -152,6 +152,7 @@ A continuación se detallan las pautas para la generación del informe técnico 
 El informe debe dividirse en las siguientes secciones **claras y visibles**:
 
 - **Perfil**
+- **IMC**
 - **Cardio**
 - **Ejercicios**
 - **Rutinas**
@@ -166,6 +167,10 @@ El informe debe dividirse en las siguientes secciones **claras y visibles**:
 ## 2. Formato de Cabeceras y Nombres
 - Todas las **cabeceras**, títulos de secciones y **nombres de ejercicios** deben ir en **negrita**.
 - No utilizar comillas en nombres ni encabezados.
+
+
+### IMC
+Necesiro que sea informacion tecnica
 
 ---
 
